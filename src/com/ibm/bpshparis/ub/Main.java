@@ -79,6 +79,8 @@ public class Main {
         	System.out.println("br.getRemote_status=" + br.getRemote_status());
         }
         
+        System.out.println("toJSON=" + Tools.toJSON(enrolRequest));
+        
         
 	}
 
