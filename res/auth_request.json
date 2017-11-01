@@ -1,0 +1,14 @@
+{ 
+	"app_version":"0.1.0",
+	"cvid_client":[159,252,215,11,37,225,71,208,134,169,251,46,163,58,143,200],
+	"cvid_uuid":[7,94,20,208,129,113,68,24,165,11,178,159,85,212,115,161,31,152,171,108],
+	"data":[
+		{"biometric_method":"touch-id","biometric_data":[1],"local_status":"OK"},
+		{"biometric_method":"android-fingerprint","biometric_data":[1],"local_status":"OK"},
+		{"biometric_method":"lock-pattern","biometric_data":[0,255,0,255,0,162],"local_status":"OK"},
+		{"biometric_method":"keystroke-dynamics","biometric_data":[0,255,0,255,0,162],"local_status":"OK"},
+		{"biometric_method":"uw-consent","biometric_data":[1],"local_status":"OK"},
+		{"biometric_method":"face-recog","biometric_data":[123, 123, 123],"local_status":"OK"},
+		{"biometric_method":"speaker-recognition","biometric_data":[123, 123 ,123],"local_status":"OK"}
+	]
+}

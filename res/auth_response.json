@@ -1,0 +1,15 @@
+{
+	"server_version":"0.1.0",
+	"cvid_client":[159,252,215,11,37,225,71,208,134,169,251,46,163,58,143,200],
+	"cvid_uuid":[7,94,20,208,129,113,68,24,165,11,178,159,85,212,115,161,31,152,171,108],
+	"data":[
+		{"biometric_method":"touch-id","remote_status":"OK"},
+		{"biometric_method":"android-fingerprint","remote_status":"OK"},
+		{"biometric_method":"lock-pattern","remote_status":"OK"},
+		{"biometric_method":"keystroke-dynamics","remote_status":"OK"},
+		{"biometric_method":"uw-consent","remote_status":"OK"},
+		{"biometric_method":"face-recog","remote_status":"OK"},
+		{"biometric_method":"speaker-recognition","remote_status":"OK"}
+	],
+	"active_sensors":["touch-id","android-fingerprint","lock-pattern","keystroke-dynamics","uw-consent","face-recog","speaker-recognition"]
+}
