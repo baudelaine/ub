@@ -1,5 +1,10 @@
 /usr/bin/ssh -f -X -Y -N -C -L 8080:172.16.184.35:8080 -g root:spcspc@172.16.184.35
 
+curl -H "Content-Type: application/json" -X POST -d '@res/enrol_request.json' http://localhost:8080/enrol
+
+curl -H "Content-Type: application/json" -X POST -d '@res/enrol_request.json' http://172.16.184.35:8080/enrol
+
+
     Une requête vers http(s)://server-address/enrol pour l'enrôlement. Il faut parser la réponse et récupérer le champ nommé "CVID_UUID" qui correspond à l'identifiant de l'utilisateur.
     Une requête vers http(s)://server-address/auth pour l'authentification. Il retourne un JSON qui contient le résultat de l'authentification. Il faudra vérifier que le "remote_status" soit égal à "OK" et non "KO".
     Dans le script, il y a une méthode qui permet de passer des données brutes (string en format hexadécimale) aux données exploitées dans les requêtes, cette méthode s'appelle: parseHexStringToByteArray et prend en entrée un string de la forme : "9ffcd70b25e147d086a9fb2ea33a8fc8"
