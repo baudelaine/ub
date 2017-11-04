@@ -39,17 +39,18 @@ public class CheckRemoteStatus implements
         	
 			AuthResponse authResponse = mapper.readValue(args[0], AuthResponse.class);
 			
-			String test = "KO";
+			String test = "OK";
 			
 			for(BiometricResponse br: authResponse.getData()){
 	        	test = br.getRemote_status();
-	        	tlm.reportMessage(" br.getRemote_status()=" +  br.getRemote_status());
-	        	if(test.equalsIgnoreCase("OK")){
-	        		break;
+	        	if(tlm.wouldReport(ITestLogManager.ALL)){
+	        		tlm.reportMessage(" br.getRemote_status()=" +  br.getRemote_status());
 	        	}
 	        }
 			
-			tlm.reportMessage("test=" + test);
+			if(tlm.wouldReport(ITestLogManager.ALL)){
+				tlm.reportMessage("test=" + test);
+			}
 			
 			if(test.equalsIgnoreCase("OK")){
 				ve.setVerdict(VerdictEvent.VERDICT_PASS);
@@ -57,12 +58,17 @@ public class CheckRemoteStatus implements
 			else{
 				ve.setVerdict(VerdictEvent.VERDICT_FAIL);
 			}
-			tlm.reportVerificationPoint(ve);
+			
+			if(tlm.wouldReport(ITestLogManager.ALL)){
+				tlm.reportVerificationPoint(ve);
+			}
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			tlm.reportMessage("CheckRemoteStatus() error=" + e.getMessage());
+			if(tlm.wouldReport(ITestLogManager.ALL)){
+				tlm.reportMessage("CheckRemoteStatus() error=" + e.getMessage());
+			}
 		}
 		
 		return null;
