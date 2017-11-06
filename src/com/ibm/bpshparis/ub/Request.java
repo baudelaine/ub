@@ -1,12 +1,13 @@
 package com.ibm.bpshparis.ub;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public abstract class  Request {
 	
-	String app_version = "";
-	List<Integer> cvid_client = new ArrayList<Integer>();
+	String app_version = "0.1.0";
+	List<Integer> cvid_client = Arrays.asList(159,252,215,11,37,225,71,208,134,169,251,46,163,58,143,200);
 	List<BiometricRequest> data = new ArrayList<BiometricRequest>();
 	
 	public String getApp_version() {

@@ -1,12 +1,8 @@
 package com.ibm.bpshparis.ub;
 
-import java.io.IOException;
-
 import org.eclipse.hyades.test.common.event.VerdictEvent;
 
-import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ibm.rational.test.lt.kernel.services.ITestExecutionServices;
 import com.ibm.rational.test.lt.kernel.services.ITestLogManager;
