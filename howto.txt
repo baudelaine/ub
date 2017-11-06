@@ -1,3 +1,8 @@
+for i in $(seq 2 9); do sshpass -p spcspc ssh -f rpt$i /opt/SDP/Majordomo/st.sh; done
+
+for i in $(seq 2 9); do sshpass -p spcspc ssh rpt$i /opt/SDP/Majordomo/sp.sh; done
+
+
 /usr/bin/ssh -f -X -Y -N -C -L 8080:172.16.184.35:8080 -g root:spcspc@172.16.184.35
 
 curl -H "Content-Type: application/json" -X POST -d '@res/enrol_request.json' http://localhost:8080/enrol
